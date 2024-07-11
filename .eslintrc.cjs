@@ -1,3 +1,3 @@
 module.exports = {
-  "extends": ["eslint-fe-lint/typescript/react"]
+  "extends": ["eslint-fe-lint/typescript/react", "prettier"]
 }
