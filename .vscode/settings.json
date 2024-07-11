@@ -4,7 +4,7 @@
     "manifest.json": "jsonc"
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
-  "stylelint.validate": ["css", "scss", "less", "sass", "postcss"],
+  "stylelint.validate": ["css", "scss", "sass", "postcss"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit",
