@@ -21,7 +21,7 @@ jobs:
         run: |
           npm i -g pnpm
           pnpm install
-          pnpm run build:pro
+          pnpm run build:test
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
       - name: Deploy
