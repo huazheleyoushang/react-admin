@@ -9,6 +9,7 @@ import { createHtmlPlugin } from 'vite-plugin-html';
 export default defineConfig((mode: ConfigEnv): UserConfig => {
   const env = loadEnv(mode.mode, process.cwd());
   return {
+    base: './',
     resolve: {
       alias: {
         '@': resolve(__dirname, './src'),
