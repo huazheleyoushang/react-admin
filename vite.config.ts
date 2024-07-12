@@ -71,13 +71,13 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
       // 		drop_debugger: true
       // 	}
       // },
-      // rollupOptions: {
-      //   output: {
-      //     chunkFileNames: 'assets/js/[name]-[hash].js',
-      //     entryFileNames: 'assets/js/[name]-[hash].js',
-      //     assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
-      //   },
-      // },
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'assets/js/[name]-[hash].js',
+          entryFileNames: 'assets/js/[name]-[hash].js',
+          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+        },
+      },
     },
   };
 });
