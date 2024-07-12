@@ -73,9 +73,9 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
       // },
       rollupOptions: {
         output: {
-          chunkFileNames: 'assets/js/[name]-[hash].js',
-          entryFileNames: 'assets/js/[name]-[hash].js',
-          assetFileNames: 'assets/[ext]/[name]-[hash].[ext]',
+          chunkFileNames: '/react-admin/assets/js/[name]-[hash].js',
+          entryFileNames: '/react-admin/assets/js/[name]-[hash].js',
+          assetFileNames: '/react-admin/assets/[ext]/[name]-[hash].[ext]',
         },
       },
     },
