@@ -2,7 +2,7 @@
 import '@/styles/reset.less';
 import '@/assets/iconfont/iconfont.less';
 import '@/assets/fonts/font.less';
-// import 'antd/dist/antd.css';
+import 'antd/dist/reset.css';
 import '@/styles/common.less';
 import '@/language/index';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -32,6 +32,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <PersistGate persistor={persistor}>
       <App />
     </PersistGate>
-  </Provider>
+  </Provider>,
   // </React.StrictMode>
 );

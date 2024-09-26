@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getBrowserLang } from '@/utils/util';
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, theme } from 'antd';
 import { connect } from 'react-redux';
 import { setLanguage } from '@/store/modules/global/action';
 import { HashRouter } from 'react-router-dom';
@@ -14,6 +14,7 @@ const App: React.FC = (props: any) => {
   const { language, assemblySize, themeConfig, setLanguage } = props;
   const [i18nLocale, setI18nLocale] = useState(zhCN);
 
+  console.log('themeConfig', themeConfig);
   // 设置 antd 语言国际化
   const setAntdLanguage = () => {
     // 如果 redux 中有默认语言就设置成 redux 的默认语言，没有默认语言就设置成浏览器默认语言
@@ -32,7 +33,16 @@ const App: React.FC = (props: any) => {
 
   return (
     <HashRouter>
-      <ConfigProvider locale={i18nLocale} componentSize={assemblySize}>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: themeConfig.primary,
+          },
+          algorithm: themeConfig.isDark ? theme.darkAlgorithm : theme.defaultAlgorithm,
+        }}
+        locale={i18nLocale}
+        componentSize={assemblySize}
+      >
         <AuthRouter>
           <Router />
         </AuthRouter>

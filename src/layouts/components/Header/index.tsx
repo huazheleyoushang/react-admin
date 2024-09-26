@@ -1,4 +1,4 @@
-import { Layout } from 'antd';
+import { Layout, theme } from 'antd';
 import AvatarIcon from './components/AvatarIcon';
 import CollapseIcon from './components/CollapseIcon';
 import BreadcrumbNav from './components/BreadcrumbNav';
@@ -9,9 +9,12 @@ import './index.less';
 
 const LayoutHeader = () => {
   const { Header } = Layout;
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
 
   return (
-    <Header>
+    <Header style={{ background: colorBgContainer }}>
       <div className="header-lf">
         <CollapseIcon />
         <BreadcrumbNav />

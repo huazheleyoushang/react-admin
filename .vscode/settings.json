@@ -45,5 +45,5 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
-  "cSpell.words": ["pinia", "uview", "vuex"]
+  "cSpell.words": ["antd", "immer", "persistor", "pinia", "uview", "vuex"]
 }
